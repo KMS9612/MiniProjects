@@ -6,8 +6,12 @@ export default function CalculatorPresenter(props: any) {
       <Cal.Bar>{props.number}</Cal.Bar>
       <Cal.Floor>
         <Cal.Btn onClick={props.onClickReset}>C</Cal.Btn>
-        <Cal.Btn id="*">*</Cal.Btn>
-        <Cal.Btn id="+">/</Cal.Btn>
+        <Cal.Btn id="*" onClick={props.onClickSomeOperator}>
+          *
+        </Cal.Btn>
+        <Cal.Btn id="/" onClick={props.onClickSomeOperator}>
+          /
+        </Cal.Btn>
         <Cal.Btn>=</Cal.Btn>
       </Cal.Floor>
       <Cal.Floor>
@@ -20,7 +24,9 @@ export default function CalculatorPresenter(props: any) {
         <Cal.Btn id="9" onClick={props.onClickNumber}>
           9
         </Cal.Btn>
-        <Cal.Btn id="">+</Cal.Btn>
+        <Cal.Btn id="+" onClick={props.onClickSomeOperator}>
+          +
+        </Cal.Btn>
       </Cal.Floor>
       <Cal.Floor>
         <Cal.Btn id="4" onClick={props.onClickNumber}>
